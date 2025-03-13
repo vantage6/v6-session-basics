@@ -1,0 +1,2 @@
+vantage6-algorithm-tools==4.9.1
+pandas

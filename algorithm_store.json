@@ -1,0 +1,83 @@
+{
+    "name": "v6-session-basics",
+    "code_url": "https://github.com/vantage6/v6-session-basics",
+    "description": "This algorithm demonstrates the basics of a session.",
+    "reviews": [],
+    "vantage6_version": "4.9",
+    "partitioning": "horizontal",
+    "functions": [
+      {
+        "name": "read_csv",
+        "display_name": "Read CSV file",
+        "standalone": true,
+        "description": "",
+        "ui_visualizations": [],
+        "type": "federated",
+        "arguments": [],
+        "databases": [
+          {
+            "description": "",
+            "name": "Database"
+          }
+        ]
+      },
+      {
+        "name": "pre_process",
+        "display_name": "Change column dtype",
+        "standalone": true,
+        "description": "Change data type of particular column (e.g. string to int)",
+        "ui_visualizations": [],
+        "type": "federated",
+        "arguments": [
+          {
+            "has_default_value": false,
+            "conditional_value": null,
+            "name": "column",
+            "display_name": "Column ",
+            "conditional_operator": null,
+            "description": "Column to change data type of ",
+            "type": "column",
+            "default_value": "",
+            "is_frontend_only": false
+          },
+          {
+            "has_default_value": false,
+            "conditional_value": null,
+            "name": "dtype",
+            "display_name": "New data type",
+            "conditional_operator": null,
+            "description": "",
+            "type": "string",
+            "default_value": "",
+            "is_frontend_only": false
+          }
+        ],
+        "databases": []
+      },
+      {
+        "name": "sum",
+        "display_name": "Sum",
+        "standalone": true,
+        "description": "",
+        "ui_visualizations": [],
+        "type": "federated",
+        "arguments": [
+          {
+            "has_default_value": false,
+            "conditional_value": null,
+            "name": "column",
+            "display_name": "Column to sum",
+            "conditional_operator": null,
+            "description": "",
+            "type": "column",
+            "default_value": "",
+            "is_frontend_only": false
+          }
+        ],
+        "databases": []
+      }
+    ],
+    "documentation_url": "",
+    "developer_id": 2,
+    "image": "harbor2.vantage6.ai/algorithms/session-basics"
+  }
