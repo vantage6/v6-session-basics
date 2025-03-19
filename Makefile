@@ -19,7 +19,7 @@ image:
 	@echo "Building ${REGISTRY}/algorithms/session-basics:latest"
 	docker buildx build \
 		--tag ${REGISTRY}/algorithms/session-basics:${TAG}-v6-${VANTAGE6_VERSION} \
-		--tag ${REGISTRY}/algorithms/session-basics:${TAG} \
+		--tag ${REGISTRY}/algorithms/session-basics:latest \
 		--platform ${PLATFORMS} \
 		-f ./Dockerfile \
 		$(if ${_condition_push},--push .,.)
