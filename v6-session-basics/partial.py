@@ -31,8 +31,8 @@ def pre_process(df1: pd.DataFrame, column, dtype) -> pd.DataFrame:
 
 @pre_processing
 @data(1)
-def pre_process2(df1: pd.DataFrame, new_column) -> pd.DataFrame:
-    df1[new_column] = df1["age"] + 10
+def pre_process2(df1: pd.DataFrame, column, new_column) -> pd.DataFrame:
+    df1[new_column] = df1[column] + 10
     return df1
 
 
