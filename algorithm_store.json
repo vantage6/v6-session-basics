@@ -12,7 +12,7 @@
         "standalone": true,
         "description": "Compute the global sum of a federated dataset",
         "ui_visualizations": [],
-        "type": "central",
+        "step_type": "central compute",
         "arguments": [
           {
             "has_default_value": false,
@@ -34,7 +34,7 @@
         "standalone": true,
         "description": "Sleep for a given number of seconds",
         "ui_visualizations": [],
-        "type": "federated",
+        "step_type": "federated compute",
         "arguments": [],
         "databases": []
       },
@@ -44,7 +44,7 @@
         "standalone": true,
         "description": "",
         "ui_visualizations": [],
-        "type": "federated",
+        "step_type": "data extraction",
         "arguments": [],
         "databases": [
           {
@@ -59,7 +59,7 @@
         "standalone": true,
         "description": "Change data type of particular column (e.g. string to int)",
         "ui_visualizations": [],
-        "type": "federated",
+        "step_type": "preprocessing",
         "arguments": [
           {
             "has_default_value": false,
@@ -92,7 +92,7 @@
         "standalone": true,
         "description": "",
         "ui_visualizations": [],
-        "type": "federated",
+        "step_type": "federated compute",
         "arguments": [
           {
             "has_default_value": false,
@@ -110,6 +110,5 @@
       }
     ],
     "documentation_url": "",
-    "developer_id": 2,
     "image": "harbor2.vantage6.ai/algorithms/session-basics"
   }
