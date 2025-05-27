@@ -7,6 +7,38 @@
     "partitioning": "horizontal",
     "functions": [
       {
+        "name": "global_sum",
+        "display_name": "Sum",
+        "standalone": true,
+        "description": "Compute the global sum of a federated dataset",
+        "ui_visualizations": [],
+        "type": "central",
+        "arguments": [
+          {
+            "has_default_value": false,
+            "conditional_value": null,
+            "name": "column",
+            "display_name": "Column to sum",
+            "conditional_operator": null,
+            "description": "Computes the global sum of the given column",
+            "type": "column",
+            "default_value": "",
+            "is_frontend_only": false
+          }
+        ],
+        "databases": []
+      },
+      {
+        "name": "sleep",
+        "display_name": "Sleep",
+        "standalone": true,
+        "description": "Sleep for a given number of seconds",
+        "ui_visualizations": [],
+        "type": "federated",
+        "arguments": [],
+        "databases": []
+      },
+      {
         "name": "read_csv",
         "display_name": "Read CSV file",
         "standalone": true,
