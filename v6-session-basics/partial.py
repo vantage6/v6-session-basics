@@ -33,14 +33,6 @@ def pre_process(df1: pd.DataFrame, column: str, dtype: str) -> pd.DataFrame:
     return df1
 
 
-@pre_processing
-@data(1)
-def pre_process2(df1: pd.DataFrame, new_column: str) -> pd.DataFrame:
-    info(f"Pre-processing data for new column {new_column} by adding 10 to 'age'")
-    df1[new_column] = df1["age"] + 10
-    return df1
-
-
 @federated
 @data(1)
 def sum(df1: pd.DataFrame, column: str) -> dict:
@@ -49,8 +41,7 @@ def sum(df1: pd.DataFrame, column: str) -> dict:
 
 
 @federated
-@data(1)
-def sleep(df1: pd.DataFrame, seconds: int) -> dict:
+def sleep(seconds: int) -> dict:
     info(f"Sleeping for {seconds} seconds")
     time.sleep(seconds)
     return {"sleep": "done"}
