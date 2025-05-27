@@ -19,8 +19,9 @@ def global_sum(client: AlgorithmClient, column: str) -> dict:
     task = client.task.create(
         name="central-sum",
         description="subtask",
+        method="sum",
         organizations=ids,
-        input_={"method": "sum", "args": [column], "kwargs": {}},
+        input_={"args": [column], "kwargs": {}},
     )
 
     info("Waiting for results...")
