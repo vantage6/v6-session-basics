@@ -20,9 +20,9 @@ from vantage6.algorithm.decorator.action import (
 
 @data_extraction
 @source_database
-def read_csv(database_uri: str) -> dict:
-    info(f"Reading CSV file from {database_uri}")
-    return pd.read_csv(database_uri)
+def read_csv(connection_details: dict) -> dict:
+    info(f"Reading CSV file from {connection_details['uri']}")
+    return pd.read_csv(connection_details["uri"])
 
 
 @pre_processing
