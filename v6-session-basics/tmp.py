@@ -155,16 +155,12 @@ def dataframe(*sources: str | int) -> callable:
     return protection_decorator
 
 
-def dataframes() -> callable:
+def dataframes(func: callable) -> callable:
     """
     Decorator that adds multiple pandas dataframes to a function
 
-    By adding `@dataframes()` to a function, multiple pandas dataframes will be
+    By adding `@dataframes` to a function, multiple pandas dataframes will be
     added to the front of the argument list. This data will be read from the
     databases that the user who creates the task provides.
     """
-
-    def decorator(func: callable) -> callable:
-        return dataframe("many")(func)
-
-    return decorator
+    return dataframe("many")(func)
