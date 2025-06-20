@@ -163,4 +163,8 @@ def dataframes() -> callable:
     added to the front of the argument list. This data will be read from the
     databases that the user who creates the task provides.
     """
-    return dataframe("many")
+
+    def decorator(func: callable) -> callable:
+        return dataframe("many")(func)
+
+    return decorator
