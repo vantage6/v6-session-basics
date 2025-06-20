@@ -1,2 +1,2 @@
-vantage6-algorithm-tools==5.0.0a17
+vantage6-algorithm-tools==5.0.0a19
 pandas
