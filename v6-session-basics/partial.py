@@ -11,6 +11,7 @@ import time
 import pandas as pd
 from vantage6.common import info, error
 from vantage6.algorithm.decorator import data, source_database
+from .tmp import dataframe, dataframes
 from vantage6.algorithm.decorator.action import (
     data_extraction,
     pre_processing,
@@ -45,3 +46,19 @@ def sleep(seconds: int) -> dict:
     info(f"Sleeping for {seconds} seconds")
     time.sleep(seconds)
     return {"sleep": "done"}
+
+
+@federated
+@dataframe(1)
+def sum_(df1: pd.DataFrame, column: str) -> dict:
+    info(f"Summing column {column}")
+    return {"sum": int(df1[column].sum())}
+
+
+@federated
+@dataframes
+def sum_many(dfs: dict[str, pd.DataFrame], column: str) -> dict:
+    sums = {}
+    for df_name, df in dfs.items():
+        sums[df_name] = df[column].sum()
+    return {"sums": sums}
