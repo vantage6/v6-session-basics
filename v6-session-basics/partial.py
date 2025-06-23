@@ -60,5 +60,5 @@ def sum_dev(df1: pd.DataFrame, column: str) -> dict:
 def sum_many(dfs: dict[str, pd.DataFrame], column: str) -> dict:
     sums = {}
     for df_name, df in dfs.items():
-        sums[df_name] = df[column].sum()
+        sums[df_name] = int(df[column].sum())
     return {"sums": sums}
