@@ -97,4 +97,4 @@ def global_sum_dev_many(client: AlgorithmClient, column: str) -> dict:
     for output in results:
         global_sums.update(output["sums"])
 
-    return {"global_sum": global_sum}
+    return {"global_sum": global_sums}
