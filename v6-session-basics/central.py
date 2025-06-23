@@ -51,7 +51,7 @@ def global_sum_dev(client: AlgorithmClient, column: str) -> dict:
     task = client.task.create(
         name="central-sum",
         description="subtask",
-        method="sum_",
+        method="sum_dev",
         organizations=ids,
         input_={"args": [column], "kwargs": {}},
     )
