@@ -136,7 +136,7 @@ def dataframe(*sources: str | int) -> callable:
 
                 # if the source is not "many", we can just add the first (and only)
                 # dataframe to the arguments
-                if source.lower() != "many":
+                if str(source).lower() != "many":
                     data_ = _read_df_from_disk(requested_dataframes[0])
                 else:
                     data_ = {}
