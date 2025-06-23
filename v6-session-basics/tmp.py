@@ -18,6 +18,7 @@ def _get_user_dataframes() -> list[str]:
         that are required for the argument.
     """
     dfs = os.environ[ContainerEnvNames.USER_REQUESTED_DATAFRAMES.value]
+    info(f"User requested dataframes: {dfs}")
 
     data_arguments = dfs.split(";")
     return [arg.split(",") for arg in data_arguments]
