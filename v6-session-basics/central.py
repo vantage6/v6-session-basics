@@ -38,7 +38,7 @@ def global_sum(client: AlgorithmClient, column: str) -> dict:
 
 @central
 @algorithm_client
-def global_sum_(client: AlgorithmClient, column: str) -> dict:
+def global_sum_dev(client: AlgorithmClient, column: str) -> dict:
     info("Central function that sums the results of the federated sum function")
 
     # Collect all organization that participate in this collaboration.
