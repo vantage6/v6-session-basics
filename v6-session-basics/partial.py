@@ -43,8 +43,11 @@ def sum(df1: pd.DataFrame, column: str) -> dict:
 
 @federated
 def sleep(seconds: int) -> dict:
-    info(f"Sleeping for {seconds} seconds")
-    time.sleep(seconds)
+    info(f"Starting sleep task for {seconds} seconds")
+    for i in range(seconds):
+        info(f"Sleeping: {i+1} second(s) elapsed")
+        time.sleep(1)
+    info("Sleep task completed")
     return {"sleep": "done"}
 
 
