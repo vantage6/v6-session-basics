@@ -10,24 +10,22 @@ or directly to the user (if they requested partial results).
 import time
 import pandas as pd
 from vantage6.common import info, error
-from vantage6.algorithm.decorator import data, source_database
-from .tmp import dataframe, dataframes
+from vantage6.algorithm.decorator.data import dataframe, dataframes
 from vantage6.algorithm.decorator.action import (
     data_extraction,
-    pre_processing,
+    preprocessing,
     federated,
 )
 
 
 @data_extraction
-@source_database
 def read_csv(connection_details: dict) -> dict:
     info(f"Reading CSV file from {connection_details['uri']}")
     return pd.read_csv(connection_details["uri"])
 
 
-@pre_processing
-@data(1)
+@preprocessing
+@dataframe(1)
 def pre_process(df1: pd.DataFrame, column: str, dtype: str) -> pd.DataFrame:
     info(f"Pre-processing data for column {column} with dtype {dtype}")
     df1[column] = df1[column].astype(dtype)
@@ -35,7 +33,7 @@ def pre_process(df1: pd.DataFrame, column: str, dtype: str) -> pd.DataFrame:
 
 
 @federated
-@data(1)
+@dataframe(1)
 def sum(df1: pd.DataFrame, column: str) -> dict:
     info(f"Summing column {column}")
     return {"sum": int(df1[column].sum())}

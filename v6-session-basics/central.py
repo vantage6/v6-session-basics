@@ -1,6 +1,6 @@
 from vantage6.common import info
 from vantage6.algorithm.decorator.action import central
-from vantage6.algorithm.decorator import algorithm_client
+from vantage6.algorithm.decorator.algorithm_client import algorithm_client
 from vantage6.algorithm.client import AlgorithmClient
 
 
@@ -21,7 +21,7 @@ def global_sum(client: AlgorithmClient, column: str) -> dict:
         description="subtask",
         method="sum",
         organizations=ids,
-        input_={"args": [column], "kwargs": {}},
+        arguments={"column": column},
     )
 
     info("Waiting for results...")
@@ -53,7 +53,7 @@ def global_sum_dev(client: AlgorithmClient, column: str) -> dict:
         description="subtask",
         method="sum_dev",
         organizations=ids,
-        input_={"args": [column], "kwargs": {}},
+        arguments={"column": column},
     )
 
     info("Waiting for results...")
@@ -85,7 +85,7 @@ def global_sum_dev_many(client: AlgorithmClient, column: str) -> dict:
         description="subtask",
         method="sum_many",
         organizations=ids,
-        input_={"args": [column], "kwargs": {}},
+        arguments={"column": column},
     )
 
     info("Waiting for results...")
