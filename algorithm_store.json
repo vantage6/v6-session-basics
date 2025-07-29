@@ -2,135 +2,206 @@
   "name": "v6-session-basics",
   "code_url": "https://github.com/vantage6/v6-session-basics",
   "description": "This algorithm demonstrates the basics of a session.",
-  "reviews": [],
-  "vantage6_version": "4.9",
+  "vantage6_version": "5.0.0",
   "partitioning": "horizontal",
+  "documentation_url": "",
+  "image": "harbor2.vantage6.ai/algorithms/session-basics",
   "functions": [
     {
-      "name": "global_sum",
-      "display_name": "Sum",
-      "standalone": true,
-      "description": "Compute the global sum of a federated dataset",
-      "ui_visualizations": [],
-      "step_type": "central_compute",
       "arguments": [
         {
-          "has_default_value": false,
-          "conditional_value": null,
-          "name": "column",
-          "display_name": "Column to sum",
-          "conditional_operator": null,
-          "description": "Computes the global sum of the given column",
           "type": "column",
-          "default_value": "",
-          "is_frontend_only": false
-        }
-      ],
-      "databases": [
-        {
-          "name": "database",
-          "description": ""
-        }
-      ]
-    },
-    {
-      "name": "sleep",
-      "display_name": "Sleep",
-      "standalone": true,
-      "description": "Sleep for a given number of seconds",
-      "ui_visualizations": [],
-      "step_type": "federated_compute",
-      "arguments": [
-        {
-          "type": "integer",
-          "conditional_operator": null,
-          "description": "Amount of time that the function should sleep",
-          "name": "seconds",
+          "description": "Computes the global sum of the given column",
           "has_default_value": false,
           "conditional_value": null,
           "is_frontend_only": false,
-          "display_name": "Seconds",
-          "default_value": ""
+          "default_value": "",
+          "allowed_values": [],
+          "conditional_operator": null,
+          "name": "column",
+          "display_name": "Column to sum"
         }
       ],
-      "databases": []
-    },
-    {
-      "name": "read_csv",
-      "display_name": "Read CSV file",
+      "description": "Compute the global sum of a given column in one or more dataframes",
       "standalone": true,
-      "description": "",
       "ui_visualizations": [],
-      "step_type": "data_extraction",
-      "arguments": [],
       "databases": [
         {
-          "description": "",
-          "name": "Database"
+          "multiple": true,
+          "description": "Dataframe to use for computing the sum",
+          "name": "Data"
         }
-      ]
+      ],
+      "step_type": "central_compute",
+      "name": "global_sum_dev_many",
+      "display_name": "Sum for a given column in one or more dataframes"
     },
     {
-      "name": "pre_process",
-      "display_name": "Change column dtype",
-      "standalone": true,
-      "description": "Change data type of particular column (e.g. string to int)",
-      "ui_visualizations": [],
-      "step_type": "preprocessing",
       "arguments": [
         {
+          "type": "column",
+          "description": "Computes the global sum of the given column",
           "has_default_value": false,
           "conditional_value": null,
-          "name": "column",
-          "display_name": "Column ",
-          "conditional_operator": null,
-          "description": "Column to change data type of ",
-          "type": "column",
+          "is_frontend_only": false,
           "default_value": "",
-          "is_frontend_only": false
+          "allowed_values": [],
+          "conditional_operator": null,
+          "name": "column",
+          "display_name": "Column to sum"
+        }
+      ],
+      "description": "Compute the global sum of a federated dataset",
+      "standalone": true,
+      "ui_visualizations": [],
+      "databases": [
+        {
+          "multiple": false,
+          "description": "Dataframe to use for computing the sum",
+          "name": "Data"
+        }
+      ],
+      "step_type": "central_compute",
+      "name": "global_sum_dev",
+      "display_name": "Sum"
+    },
+    {
+      "arguments": [
+        {
+          "type": "integer",
+          "description": "How many seconds to sleep",
+          "has_default_value": true,
+          "conditional_value": null,
+          "is_frontend_only": false,
+          "default_value": "10",
+          "allowed_values": [],
+          "conditional_operator": null,
+          "name": "seconds",
+          "display_name": "Seconds"
+        }
+      ],
+      "description": "Sleep for a given number of seconds",
+      "standalone": true,
+      "ui_visualizations": [],
+      "databases": [],
+      "step_type": "federated_compute",
+      "name": "sleep",
+      "display_name": "Sleep"
+    },
+    {
+      "arguments": [],
+      "description": "",
+      "standalone": true,
+      "ui_visualizations": [],
+      "databases": [
+        {
+          "multiple": false,
+          "description": "",
+          "name": "Database to read from"
+        }
+      ],
+      "step_type": "data_extraction",
+      "name": "read_csv",
+      "display_name": "Read CSV file"
+    },
+    {
+      "arguments": [
+        {
+          "type": "column",
+          "description": "Column to change data type of ",
+          "has_default_value": false,
+          "conditional_value": null,
+          "is_frontend_only": false,
+          "default_value": "",
+          "allowed_values": [],
+          "conditional_operator": null,
+          "name": "column",
+          "display_name": "Column "
         },
         {
-          "has_default_value": false,
-          "conditional_value": null,
-          "name": "dtype",
-          "display_name": "New data type",
-          "conditional_operator": null,
-          "description": "",
           "type": "string",
-          "default_value": "",
-          "is_frontend_only": false
-        }
-      ],
-      "databases": []
-    },
-    {
-      "name": "sum",
-      "display_name": "Sum",
-      "standalone": true,
-      "description": "",
-      "ui_visualizations": [],
-      "step_type": "federated_compute",
-      "arguments": [
-        {
+          "description": "",
           "has_default_value": false,
           "conditional_value": null,
-          "name": "column",
-          "display_name": "Column to sum",
-          "conditional_operator": null,
-          "description": "",
-          "type": "column",
+          "is_frontend_only": false,
           "default_value": "",
-          "is_frontend_only": false
+          "allowed_values": [],
+          "conditional_operator": null,
+          "name": "dtype",
+          "display_name": "New data type"
         }
       ],
+      "description": "Change data type of particular column (e.g. string to int)",
+      "standalone": true,
+      "ui_visualizations": [],
       "databases": [
         {
-          "name": "database",
-          "description": ""
+          "multiple": false,
+          "description": "Dataframe to execute preprocessing on",
+          "name": "Data"
         }
-      ]
+      ],
+      "step_type": "preprocessing",
+      "name": "preprocess",
+      "display_name": "Change column dtype"
+    },
+    {
+      "arguments": [
+        {
+          "type": "column",
+          "description": "",
+          "has_default_value": false,
+          "conditional_value": null,
+          "is_frontend_only": false,
+          "default_value": "",
+          "allowed_values": [],
+          "conditional_operator": null,
+          "name": "column",
+          "display_name": "Column to sum"
+        }
+      ],
+      "description": "",
+      "standalone": true,
+      "ui_visualizations": [],
+      "databases": [
+        {
+          "multiple": false,
+          "description": "Dataframe to use for computing the sum",
+          "name": "Data"
+        }
+      ],
+      "step_type": "federated_compute",
+      "name": "sum_dev",
+      "display_name": "Sum"
+    },
+    {
+      "arguments": [
+        {
+          "type": "column",
+          "description": "",
+          "has_default_value": false,
+          "conditional_value": null,
+          "is_frontend_only": false,
+          "default_value": "",
+          "allowed_values": [],
+          "conditional_operator": null,
+          "name": "column",
+          "display_name": "Column to sum"
+        }
+      ],
+      "description": "Sum one column for each dataframe",
+      "standalone": true,
+      "ui_visualizations": [],
+      "databases": [
+        {
+          "multiple": true,
+          "description": "Dataframes to use for computing the sum",
+          "name": "Dataframes"
+        }
+      ],
+      "step_type": "federated_compute",
+      "name": "sum_many",
+      "display_name": "Sum for a given column in one or more dataframes"
     }
-  ],
-  "documentation_url": "",
-  "image": "harbor2.vantage6.ai/algorithms/session-basics"
+  ]
 }
