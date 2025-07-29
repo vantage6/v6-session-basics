@@ -13,11 +13,9 @@
           "type": "column",
           "description": "Computes the global sum of the given column",
           "has_default_value": false,
-          "conditional_value": null,
           "is_frontend_only": false,
           "default_value": "",
           "allowed_values": [],
-          "conditional_operator": null,
           "name": "column",
           "display_name": "Column to sum"
         }
@@ -42,11 +40,9 @@
           "type": "column",
           "description": "Computes the global sum of the given column",
           "has_default_value": false,
-          "conditional_value": null,
           "is_frontend_only": false,
           "default_value": "",
           "allowed_values": [],
-          "conditional_operator": null,
           "name": "column",
           "display_name": "Column to sum"
         }
@@ -71,11 +67,9 @@
           "type": "integer",
           "description": "How many seconds to sleep",
           "has_default_value": true,
-          "conditional_value": null,
           "is_frontend_only": false,
           "default_value": "10",
           "allowed_values": [],
-          "conditional_operator": null,
           "name": "seconds",
           "display_name": "Seconds"
         }
@@ -110,11 +104,9 @@
           "type": "column",
           "description": "Column to change data type of ",
           "has_default_value": false,
-          "conditional_value": null,
           "is_frontend_only": false,
           "default_value": "",
           "allowed_values": [],
-          "conditional_operator": null,
           "name": "column",
           "display_name": "Column "
         },
@@ -122,11 +114,9 @@
           "type": "string",
           "description": "",
           "has_default_value": false,
-          "conditional_value": null,
           "is_frontend_only": false,
           "default_value": "",
           "allowed_values": [],
-          "conditional_operator": null,
           "name": "dtype",
           "display_name": "New data type"
         }
@@ -151,11 +141,9 @@
           "type": "column",
           "description": "",
           "has_default_value": false,
-          "conditional_value": null,
           "is_frontend_only": false,
           "default_value": "",
           "allowed_values": [],
-          "conditional_operator": null,
           "name": "column",
           "display_name": "Column to sum"
         }
@@ -180,11 +168,9 @@
           "type": "column",
           "description": "",
           "has_default_value": false,
-          "conditional_value": null,
           "is_frontend_only": false,
           "default_value": "",
           "allowed_values": [],
-          "conditional_operator": null,
           "name": "column",
           "display_name": "Column to sum"
         }
