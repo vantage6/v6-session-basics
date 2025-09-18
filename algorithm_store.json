@@ -8,33 +8,32 @@
   "image": "harbor2.vantage6.ai/algorithms/session-basics",
   "functions": [
     {
+      "name": "global_sum",
+      "display_name": "Global sum",
+      "standalone": true,
+      "description": "",
+      "step_type": "central_compute",
+      "ui_visualizations": [],
       "arguments": [
         {
-          "type": "column",
-          "description": "Computes the global sum of the given column",
-          "has_default_value": false,
-          "is_frontend_only": false,
-          "default_value": "",
-          "allowed_values": [],
           "name": "column",
-          "display_name": "Column to sum"
+          "display_name": "Column",
+          "description": "",
+          "type": "string",
+          "required": true,
+          "has_default_value": false,
+          "is_frontend_only": false
         }
       ],
-      "description": "Compute the global sum of a given column in one or more dataframes",
-      "standalone": true,
-      "ui_visualizations": [],
-      "databases": [
-        {
-          "multiple": true,
-          "description": "Dataframe to use for computing the sum",
-          "name": "Data"
-        }
-      ],
-      "step_type": "central_compute",
-      "name": "global_sum_dev_many",
-      "display_name": "Sum for a given column in one or more dataframes"
+      "databases": []
     },
     {
+      "name": "global_sum_dev",
+      "display_name": "Sum",
+      "standalone": true,
+      "description": "Compute the global sum of a federated dataset",
+      "step_type": "central_compute",
+      "ui_visualizations": [],
       "arguments": [
         {
           "type": "column",
@@ -47,21 +46,118 @@
           "display_name": "Column to sum"
         }
       ],
-      "description": "Compute the global sum of a federated dataset",
-      "standalone": true,
-      "ui_visualizations": [],
       "databases": [
         {
           "multiple": false,
           "description": "Dataframe to use for computing the sum",
           "name": "Data"
         }
-      ],
-      "step_type": "central_compute",
-      "name": "global_sum_dev",
-      "display_name": "Sum"
+      ]
     },
     {
+      "name": "global_sum_dev_many",
+      "display_name": "Sum for a given column in one or more dataframes",
+      "standalone": true,
+      "description": "Compute the global sum of a given column in one or more dataframes",
+      "step_type": "central_compute",
+      "ui_visualizations": [],
+      "arguments": [
+        {
+          "type": "column",
+          "description": "Computes the global sum of the given column",
+          "has_default_value": false,
+          "is_frontend_only": false,
+          "default_value": "",
+          "allowed_values": [],
+          "name": "column",
+          "display_name": "Column to sum"
+        }
+      ],
+      "databases": [
+        {
+          "multiple": true,
+          "description": "Dataframe to use for computing the sum",
+          "name": "Data"
+        }
+      ]
+    },
+    {
+      "name": "global_sum_two_df",
+      "display_name": "Global sum two df",
+      "standalone": true,
+      "description": "",
+      "step_type": "central_compute",
+      "ui_visualizations": [],
+      "arguments": [
+        {
+          "name": "column",
+          "display_name": "Column",
+          "description": "",
+          "type": "string",
+          "required": true,
+          "has_default_value": false,
+          "is_frontend_only": false
+        }
+      ],
+      "databases": []
+    },
+    {
+      "name": "pre_process",
+      "display_name": "Pre process",
+      "standalone": true,
+      "description": "",
+      "step_type": "preprocessing",
+      "ui_visualizations": [],
+      "arguments": [
+        {
+          "name": "column",
+          "display_name": "Column",
+          "description": "",
+          "type": "string",
+          "required": true,
+          "has_default_value": false,
+          "is_frontend_only": false
+        },
+        {
+          "name": "dtype",
+          "display_name": "Dtype",
+          "description": "",
+          "type": "string",
+          "required": true,
+          "has_default_value": false,
+          "is_frontend_only": false
+        }
+      ],
+      "databases": [
+        {
+          "name": "df1",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "read_csv",
+      "display_name": "Read CSV file",
+      "standalone": true,
+      "description": "",
+      "step_type": "data_extraction",
+      "ui_visualizations": [],
+      "arguments": [],
+      "databases": [
+        {
+          "multiple": false,
+          "description": "",
+          "name": "Database to read from"
+        }
+      ]
+    },
+    {
+      "name": "sleep",
+      "display_name": "Sleep",
+      "standalone": true,
+      "description": "Sleep for a given number of seconds",
+      "step_type": "federated_compute",
+      "ui_visualizations": [],
       "arguments": [
         {
           "type": "integer",
@@ -74,68 +170,40 @@
           "display_name": "Seconds"
         }
       ],
-      "description": "Sleep for a given number of seconds",
-      "standalone": true,
-      "ui_visualizations": [],
-      "databases": [],
-      "step_type": "federated_compute",
-      "name": "sleep",
-      "display_name": "Sleep"
+      "databases": []
     },
     {
-      "arguments": [],
+      "name": "sum",
+      "display_name": "Sum",
+      "standalone": true,
       "description": "",
-      "standalone": true,
+      "step_type": "federated_compute",
       "ui_visualizations": [],
-      "databases": [
-        {
-          "multiple": false,
-          "description": "",
-          "name": "Database to read from"
-        }
-      ],
-      "step_type": "data_extraction",
-      "name": "read_csv",
-      "display_name": "Read CSV file"
-    },
-    {
       "arguments": [
         {
-          "type": "column",
-          "description": "Column to change data type of ",
-          "has_default_value": false,
-          "is_frontend_only": false,
-          "default_value": "",
-          "allowed_values": [],
           "name": "column",
-          "display_name": "Column "
-        },
-        {
-          "type": "string",
+          "display_name": "Column",
           "description": "",
+          "type": "string",
+          "required": true,
           "has_default_value": false,
-          "is_frontend_only": false,
-          "default_value": "",
-          "allowed_values": [],
-          "name": "dtype",
-          "display_name": "New data type"
+          "is_frontend_only": false
         }
       ],
-      "description": "Change data type of particular column (e.g. string to int)",
-      "standalone": true,
-      "ui_visualizations": [],
       "databases": [
         {
-          "multiple": false,
-          "description": "Dataframe to execute preprocessing on",
-          "name": "Data"
+          "name": "df1",
+          "description": ""
         }
-      ],
-      "step_type": "preprocessing",
-      "name": "preprocess",
-      "display_name": "Change column dtype"
+      ]
     },
     {
+      "name": "sum_dev",
+      "display_name": "Sum",
+      "standalone": true,
+      "description": "",
+      "step_type": "federated_compute",
+      "ui_visualizations": [],
       "arguments": [
         {
           "type": "column",
@@ -148,21 +216,21 @@
           "display_name": "Column to sum"
         }
       ],
-      "description": "",
-      "standalone": true,
-      "ui_visualizations": [],
       "databases": [
         {
           "multiple": false,
           "description": "Dataframe to use for computing the sum",
           "name": "Data"
         }
-      ],
-      "step_type": "federated_compute",
-      "name": "sum_dev",
-      "display_name": "Sum"
+      ]
     },
     {
+      "name": "sum_many",
+      "display_name": "Sum for a given column in one or more dataframes",
+      "standalone": true,
+      "description": "Sum one column for each dataframe",
+      "step_type": "federated_compute",
+      "ui_visualizations": [],
       "arguments": [
         {
           "type": "column",
@@ -175,19 +243,42 @@
           "display_name": "Column to sum"
         }
       ],
-      "description": "Sum one column for each dataframe",
-      "standalone": true,
-      "ui_visualizations": [],
       "databases": [
         {
           "multiple": true,
           "description": "Dataframes to use for computing the sum",
           "name": "Dataframes"
         }
-      ],
+      ]
+    },
+    {
+      "name": "two_df_sum",
+      "display_name": "Two df sum",
+      "standalone": true,
+      "description": "",
       "step_type": "federated_compute",
-      "name": "sum_many",
-      "display_name": "Sum for a given column in one or more dataframes"
+      "ui_visualizations": [],
+      "arguments": [
+        {
+          "name": "column",
+          "display_name": "Column",
+          "description": "",
+          "type": "string",
+          "required": true,
+          "has_default_value": false,
+          "is_frontend_only": false
+        }
+      ],
+      "databases": [
+        {
+          "name": "df1",
+          "description": ""
+        },
+        {
+          "name": "df2",
+          "description": ""
+        }
+      ]
     }
   ]
 }
