@@ -9,8 +9,8 @@ description = "Basic data extraction and processing jobs"
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
-  "vantage6-algorithm-tools>=5.0.0a35",
   "pandas",
+  "vantage6-algorithm-tools==5.0.0a36",
 ]
 authors = [
   { name = "Bart van Beusekom", email = "b.vanbeusekom@iknl.nl" },
