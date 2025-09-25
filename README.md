@@ -29,3 +29,24 @@ This repository is contains some basic session algorithms that run on the vantag
 The base code for this algorithm has been created via the
 [v6-algorithm-template](https://github.com/vantage6/v6-algorithm-template)
 template generator.
+
+## Build algorithm image
+
+Build and (optionally) push the algorithm image:
+```bash
+make image TAG=latest VANTAGE6_VERSION=5.0.0
+# add PUSH_REG=true to also push
+```
+
+The Dockerfile installs dependencies with uv using the lockfile for reproducibility and then installs the project.
+
+## Development quickstart
+
+Local setup using uv:
+```bash
+# Create/refresh virtualenv and install deps from pyproject/uv.lock
+uv sync
+
+# Run the package (example: list available functions or run tests)
+# if you want to add a dependency## Developing
+```

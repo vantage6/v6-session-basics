@@ -8,14 +8,15 @@ or directly to the user (if they requested partial results).
 """
 
 import time
+
 import pandas as pd
-from vantage6.common import info, error
-from vantage6.algorithm.decorator.data import dataframe, dataframes
 from vantage6.algorithm.decorator.action import (
     data_extraction,
-    preprocessing,
     federated,
+    preprocessing,
 )
+from vantage6.algorithm.decorator.data import dataframe, dataframes
+from vantage6.common import info
 
 
 @data_extraction
@@ -25,7 +26,6 @@ def read_csv(connection_details: dict) -> dict:
 
 
 @preprocessing
-@dataframe(1)
 def pre_process(df1: pd.DataFrame, column: str, dtype: str) -> pd.DataFrame:
     info(f"Pre-processing data for column {column} with dtype {dtype}")
     df1[column] = df1[column].astype(dtype)
@@ -43,7 +43,7 @@ def sum(df1: pd.DataFrame, column: str) -> dict:
 def sleep(seconds: int) -> dict:
     info(f"Starting sleep task for {seconds} seconds")
     for i in range(seconds):
-        info(f"Sleeping: {i+1} second(s) elapsed")
+        info(f"Sleeping: {i + 1} second(s) elapsed")
         time.sleep(1)
     info("Sleep task completed")
     return {"sleep": "done"}
@@ -63,3 +63,10 @@ def sum_many(dfs: dict[str, pd.DataFrame], column: str) -> dict:
     for df_name, df in dfs.items():
         sums[df_name] = int(df[column].sum())
     return {"sums": sums}
+
+
+@federated
+@dataframe(2)
+def two_df_sum(df1: pd.DataFrame, df2: pd.DataFrame, column: str) -> dict:
+    info(f"Summing column {column} of two dataframes")
+    return {"sum": int(df1[column].sum() + df2[column].sum())}
