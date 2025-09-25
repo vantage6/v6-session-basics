@@ -8,14 +8,15 @@ or directly to the user (if they requested partial results).
 """
 
 import time
+
 import pandas as pd
-from vantage6.common import info
-from vantage6.algorithm.decorator.data import dataframe, dataframes
 from vantage6.algorithm.decorator.action import (
     data_extraction,
-    preprocessing,
     federated,
+    preprocessing,
 )
+from vantage6.algorithm.decorator.data import dataframe, dataframes
+from vantage6.common import info
 
 
 @data_extraction
@@ -25,7 +26,6 @@ def read_csv(connection_details: dict) -> dict:
 
 
 @preprocessing
-@dataframe(1)
 def pre_process(df1: pd.DataFrame, column: str, dtype: str) -> pd.DataFrame:
     info(f"Pre-processing data for column {column} with dtype {dtype}")
     df1[column] = df1[column].astype(dtype)
