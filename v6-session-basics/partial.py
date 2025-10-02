@@ -50,13 +50,6 @@ def sleep(seconds: int) -> dict:
 
 
 @federated
-@dataframe(1)
-def sum_dev(df1: pd.DataFrame, column: str) -> dict:
-    info(f"Summing column {column}")
-    return {"sum": int(df1[column].sum())}
-
-
-@federated
 @dataframes
 def sum_many(dfs: dict[str, pd.DataFrame], column: str) -> dict:
     sums = {}

@@ -20,39 +20,11 @@
           "display_name": "Column",
           "description": "",
           "type": "string",
-          "required": true,
           "has_default_value": false,
           "is_frontend_only": false
         }
       ],
       "databases": []
-    },
-    {
-      "name": "global_sum_dev",
-      "display_name": "Sum",
-      "standalone": true,
-      "description": "Compute the global sum of a federated dataset",
-      "step_type": "central_compute",
-      "ui_visualizations": [],
-      "arguments": [
-        {
-          "type": "column",
-          "description": "Computes the global sum of the given column",
-          "has_default_value": false,
-          "is_frontend_only": false,
-          "default_value": "",
-          "allowed_values": [],
-          "name": "column",
-          "display_name": "Column to sum"
-        }
-      ],
-      "databases": [
-        {
-          "multiple": false,
-          "description": "Dataframe to use for computing the sum",
-          "name": "Data"
-        }
-      ]
     },
     {
       "name": "global_sum_dev_many",
@@ -94,7 +66,6 @@
           "display_name": "Column",
           "description": "",
           "type": "string",
-          "required": true,
           "has_default_value": false,
           "is_frontend_only": false
         }
@@ -114,7 +85,6 @@
           "display_name": "Column",
           "description": "",
           "type": "string",
-          "required": true,
           "has_default_value": false,
           "is_frontend_only": false
         },
@@ -123,7 +93,6 @@
           "display_name": "Dtype",
           "description": "",
           "type": "string",
-          "required": true,
           "has_default_value": false,
           "is_frontend_only": false
         }
@@ -185,7 +154,6 @@
           "display_name": "Column",
           "description": "",
           "type": "string",
-          "required": true,
           "has_default_value": false,
           "is_frontend_only": false
         }
@@ -194,33 +162,6 @@
         {
           "name": "df1",
           "description": ""
-        }
-      ]
-    },
-    {
-      "name": "sum_dev",
-      "display_name": "Sum",
-      "standalone": true,
-      "description": "",
-      "step_type": "federated_compute",
-      "ui_visualizations": [],
-      "arguments": [
-        {
-          "type": "column",
-          "description": "",
-          "has_default_value": false,
-          "is_frontend_only": false,
-          "default_value": "",
-          "allowed_values": [],
-          "name": "column",
-          "display_name": "Column to sum"
-        }
-      ],
-      "databases": [
-        {
-          "multiple": false,
-          "description": "Dataframe to use for computing the sum",
-          "name": "Data"
         }
       ]
     },
@@ -264,7 +205,6 @@
           "display_name": "Column",
           "description": "",
           "type": "string",
-          "required": true,
           "has_default_value": false,
           "is_frontend_only": false
         }
