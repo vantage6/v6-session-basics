@@ -15,8 +15,23 @@ from vantage6.algorithm.decorator.action import (
     federated,
     preprocessing,
 )
+from vantage6.algorithm.decorator.metadata import metadata, RunMetaData
 from vantage6.algorithm.decorator.data import dataframe, dataframes
 from vantage6.common import info
+
+@metadata
+def metadata(metadata: RunMetaData) -> dict:
+    return {
+        "task_id": str(metadata.task_id),
+        "node_id": str(metadata.node_id),
+        "collaboration_id": str(metadata.collaboration_id),
+        "organizations": str(metadata.organization_id),
+        "temporary_directory": str(metadata.temporary_directory),
+        "output_file": str(metadata.output_file),
+        "input_file": str(metadata.input_file),
+        "token": metadata.token,
+        "action": str(metadata.action),
+    }
 
 
 @data_extraction
