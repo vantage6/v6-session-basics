@@ -24,17 +24,18 @@ def mock_client() -> MockUserClient:
             }
         ]
     )
-    return MockUserClient(mock_network)
+    return mock_network.user_client
 
-def test_metadata_function(mock_client: MockUserClient):
+def test_sleep_function(mock_client: MockUserClient):
     """Test the metadata function"""
     # Get organizations
     orgs = mock_client.organization.list()
     org_ids = [org["id"] for org in orgs]
 
-    # Create task
+    # Note that the tasks here are run in sequence, thus sleeping for 1 seconds will
+    # be multiplied by the number of organizations.
     task = mock_client.task.create(
-        method="metadata", organizations=org_ids, arguments={}
+        method="sleep", organizations=org_ids, arguments={"seconds": 1}
     )
 
     # Wait for results
@@ -44,14 +45,5 @@ def test_metadata_function(mock_client: MockUserClient):
     assert results is not None
     assert len(results) == 2  # Two organizations
     for result in results:
-        assert "task_id" in result
-        assert "node_id" in result
-        assert "collaboration_id" in result
-        assert "organization_id" in result
-        assert "temporary_directory" in result
-        assert "output_file" in result
-        assert "input_file" in result
-        assert "token" in result
-        assert "action" in result
-
-    print(results)
+        assert "sleep" in result
+        assert result["sleep"] == "done"
