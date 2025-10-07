@@ -32,5 +32,8 @@ Issues = "https://github.com/vantage6/v6-session-basics/issues"
 [tool.hatch.build.targets.wheel]
 packages = ["v6-session-basics"]
 
+[tool.setuptools.package-data]
+"v6-session-basics" = ["data/*.csv"]
+
 [tool.uv]
 dev-dependencies = []

@@ -25,7 +25,7 @@ def metadata(metadata: RunMetaData) -> dict:
         "task_id": str(metadata.task_id),
         "node_id": str(metadata.node_id),
         "collaboration_id": str(metadata.collaboration_id),
-        "organizations": str(metadata.organization_id),
+        "organization_id": str(metadata.organization_id),
         "temporary_directory": str(metadata.temporary_directory),
         "output_file": str(metadata.output_file),
         "input_file": str(metadata.input_file),
