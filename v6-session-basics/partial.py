@@ -15,11 +15,13 @@ from vantage6.algorithm.decorator.action import (
     federated,
     preprocessing,
 )
-from vantage6.algorithm.decorator.metadata import metadata, RunMetaData
 from vantage6.algorithm.decorator.data import dataframe, dataframes
+from vantage6.algorithm.decorator.metadata import RunMetaData, metadata
 from vantage6.common import info
 
+
 @metadata
+@federated
 def metadata(metadata: RunMetaData) -> dict:
     return {
         "task_id": str(metadata.task_id),

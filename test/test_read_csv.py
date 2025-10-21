@@ -1,8 +1,8 @@
 from importlib.resources import files
+
 import pandas as pd
 import pytest
-
-from vantage6.mock.mock_network import MockNetwork, MockUserClient
+from vantage6.mock.network import MockNetwork, MockUserClient
 
 
 @pytest.fixture
@@ -22,8 +22,8 @@ def mock_client() -> MockUserClient:
                     "database": test_data,
                     "db_type": "csv",
                 },
-            }
-        ]
+            },
+        ],
     )
     return MockUserClient(mock_network)
 
@@ -41,7 +41,7 @@ def test_read_csv_function(mock_client: MockUserClient):
         arguments={},
         action="data_extraction",
         label="test_data_1",
-        name="my_dataframe_by_frank"
+        name="my_dataframe_by_frank",
     )
 
     # A data extraction job should create a dataframe on each node, lets check if this
