@@ -219,6 +219,16 @@
           "description": ""
         }
       ]
+    },
+    {
+      "name": "metadata",
+      "display_name": "Collect run metadata",
+      "standalone": true,
+      "description": "Collect run metadata",
+      "step_type": "federated_compute",
+      "ui_visualizations": [],
+      "arguments": [],
+      "databases": []
     }
   ]
 }
