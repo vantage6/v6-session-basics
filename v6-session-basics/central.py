@@ -1,7 +1,7 @@
-from vantage6.common import info
+from vantage6.algorithm.client import AlgorithmClient
 from vantage6.algorithm.decorator.action import central
 from vantage6.algorithm.decorator.algorithm_client import algorithm_client
-from vantage6.algorithm.client import AlgorithmClient
+from vantage6.common import info
 
 
 @central
