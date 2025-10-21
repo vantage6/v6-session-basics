@@ -10,6 +10,7 @@ readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
   "pandas",
+  "pytest",
   "vantage6-algorithm-tools==5.0.0a36",
 ]
 authors = [
@@ -31,6 +32,9 @@ Issues = "https://github.com/vantage6/v6-session-basics/issues"
 
 [tool.hatch.build.targets.wheel]
 packages = ["v6-session-basics"]
+
+[tool.setuptools.package-data]
+"v6-session-basics" = ["data/*.csv"]
 
 [tool.uv]
 dev-dependencies = []
