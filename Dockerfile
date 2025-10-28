@@ -7,7 +7,7 @@ ARG PKG_NAME="v6-session-basics"
 
 # install federated algorithm
 COPY . /app
-RUN uv pip install --system -e /app
+RUN uv pip install --system --prerelease=allow -e /app
 
 # Set environment variable to make name of the package available within the
 # docker image.

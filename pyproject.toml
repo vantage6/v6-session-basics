@@ -10,7 +10,9 @@ readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
   "pandas",
-  "vantage6-algorithm-tools==5.0.0a36",
+  # TODO when this can be fixed to a stable v5 release, remove
+  # prerelease=allow in Dockerfile
+  "vantage6-algorithm-tools==5.0.0a40",
 ]
 authors = [
   { name = "Bart van Beusekom", email = "b.vanbeusekom@iknl.nl" },
