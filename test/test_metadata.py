@@ -1,7 +1,7 @@
 from importlib.resources import files
 
-from vantage6.mock.mock_network import MockNetwork, MockUserClient
 import pytest
+from vantage6.mock.network import MockNetwork, MockUserClient
 
 
 @pytest.fixture
@@ -21,10 +21,11 @@ def mock_client() -> MockUserClient:
                     "database": test_data,
                     "db_type": "csv",
                 },
-            }
-        ]
+            },
+        ],
     )
     return MockUserClient(mock_network)
+
 
 def test_metadata_function(mock_client: MockUserClient):
     """Test the metadata function"""
@@ -39,6 +40,7 @@ def test_metadata_function(mock_client: MockUserClient):
 
     # Wait for results
     results = mock_client.wait_for_results(task.get("id"))
+    print(results)
 
     # Assertions
     assert results is not None

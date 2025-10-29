@@ -221,6 +221,15 @@ wheels = [
 ]
 
 [[package]]
+name = "iniconfig"
+version = "2.3.0"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/72/34/14ca021ce8e5dfedc35312d08ba8bf51fdd999c576889fc2c24cb97f4f10/iniconfig-2.3.0.tar.gz", hash = "sha256:c76315c77db068650d49c5b56314774a7804df16fee4402c1f19d6d15d8c4730", size = 20503, upload-time = "2025-10-18T21:55:43.219Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/cb/b1/3846dd7f199d53cb17f49cba7e651e9ce294d8497c8c150530ed11865bb8/iniconfig-2.3.0-py3-none-any.whl", hash = "sha256:f631c04d2c48c52b84d0d0549c99ff3859c98df65b3101406327ecc7d53fbf12", size = 7484, upload-time = "2025-10-18T21:55:41.639Z" },
+]
+
+[[package]]
 name = "markdown-it-py"
 version = "4.0.0"
 source = { registry = "https://pypi.org/simple" }
@@ -306,6 +315,15 @@ wheels = [
 ]
 
 [[package]]
+name = "packaging"
+version = "25.0"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/a1/d4/1fc4078c65507b51b96ca8f8c3ba19e6a61c8253c72794544580a7b6c24d/packaging-25.0.tar.gz", hash = "sha256:d443872c98d677bf60f6a1f2f8c1cb748e8fe762d2bf9d3148b5599295b0fc4f", size = 165727, upload-time = "2025-04-19T11:48:59.673Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/20/12/38679034af332785aac8774540895e234f4d07f7545804097de4b666afd8/packaging-25.0-py3-none-any.whl", hash = "sha256:29572ef2b1f17581046b3a2227d5c611fb25ec70ca1ba8554b24b0e69331a484", size = 66469, upload-time = "2025-04-19T11:48:57.875Z" },
+]
+
+[[package]]
 name = "pandas"
 version = "2.3.2"
 source = { registry = "https://pypi.org/simple" }
@@ -330,6 +348,15 @@ wheels = [
     { url = "https://files.pythonhosted.org/packages/15/d5/f0486090eb18dd8710bf60afeaf638ba6817047c0c8ae5c6a25598665609/pandas-2.3.2-cp313-cp313t-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:b37205ad6f00d52f16b6d09f406434ba928c1a1966e2771006a9033c736d30d2", size = 11883216, upload-time = "2025-08-21T10:27:59.302Z" },
     { url = "https://files.pythonhosted.org/packages/10/86/692050c119696da19e20245bbd650d8dfca6ceb577da027c3a73c62a047e/pandas-2.3.2-cp313-cp313t-musllinux_1_2_aarch64.whl", hash = "sha256:837248b4fc3a9b83b9c6214699a13f069dc13510a6a6d7f9ba33145d2841a012", size = 12699743, upload-time = "2025-08-21T10:28:02.447Z" },
     { url = "https://files.pythonhosted.org/packages/cd/d7/612123674d7b17cf345aad0a10289b2a384bff404e0463a83c4a3a59d205/pandas-2.3.2-cp313-cp313t-musllinux_1_2_x86_64.whl", hash = "sha256:d2c3554bd31b731cd6490d94a28f3abb8dd770634a9e06eb6d2911b9827db370", size = 13186141, upload-time = "2025-08-21T10:28:05.377Z" },
+]
+
+[[package]]
+name = "pluggy"
+version = "1.6.0"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/f9/e2/3e91f31a7d2b083fe6ef3fa267035b518369d9511ffab804f839851d2779/pluggy-1.6.0.tar.gz", hash = "sha256:7dcc130b76258d33b90f61b658791dede3486c3e6bfb003ee5c9bfb396dd22f3", size = 69412, upload-time = "2025-05-15T12:30:07.975Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/54/20/4d324d65cc6d9205fabedc306948156824eb9f0ee1633355a8f7ec5c66bf/pluggy-1.6.0-py3-none-any.whl", hash = "sha256:e920276dd6813095e9377c0bc5566d94c932c33b27a3e3945d8389c374dd4746", size = 20538, upload-time = "2025-05-15T12:30:06.134Z" },
 ]
 
 [[package]]
@@ -384,11 +411,11 @@ wheels = [
 
 [[package]]
 name = "pyfiglet"
-version = "1.0.3"
+version = "1.0.4"
 source = { registry = "https://pypi.org/simple" }
-sdist = { url = "https://files.pythonhosted.org/packages/94/49/2554c0b7fef12c0b9633352bbd8751cc616f8e8880e0ebab7732c1535564/pyfiglet-1.0.3.tar.gz", hash = "sha256:bad3b55d2eccb30d4693ccfd94573c2a3477dd75f86a0e5465cea51bdbfe2875", size = 833445, upload-time = "2025-06-02T12:13:29.357Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/c8/e3/0a86276ad2c383ce08d76110a8eec2fe22e7051c4b8ba3fa163a0b08c428/pyfiglet-1.0.4.tar.gz", hash = "sha256:db9c9940ed1bf3048deff534ed52ff2dafbbc2cd7610b17bb5eca1df6d4278ef", size = 1560615, upload-time = "2025-08-15T18:32:47.302Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/51/1d/f2cb03dd71a4dba891f808333fa505a6ed2762a8514d8ead7e423fa77e1b/pyfiglet-1.0.3-py3-none-any.whl", hash = "sha256:671bd101ca6a08dc2d94c6a2cda75a862c5e162b980af47d0ba4023837e36489", size = 1087203, upload-time = "2025-06-02T12:13:27.393Z" },
+    { url = "https://files.pythonhosted.org/packages/9f/5c/fe9f95abd5eaedfa69f31e450f7e2768bef121dbdf25bcddee2cd3087a16/pyfiglet-1.0.4-py3-none-any.whl", hash = "sha256:65b57b7a8e1dff8a67dc8e940a117238661d5e14c3e49121032bd404d9b2b39f", size = 1806118, upload-time = "2025-08-15T18:32:45.556Z" },
 ]
 
 [[package]]
@@ -416,6 +443,22 @@ source = { registry = "https://pypi.org/simple" }
 sdist = { url = "https://files.pythonhosted.org/packages/f2/a5/181488fc2b9d093e3972d2a472855aae8a03f000592dbfce716a512b3359/pyparsing-3.2.5.tar.gz", hash = "sha256:2df8d5b7b2802ef88e8d016a2eb9c7aeaa923529cd251ed0fe4608275d4105b6", size = 1099274, upload-time = "2025-09-21T04:11:06.277Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/10/5e/1aa9a93198c6b64513c9d7752de7422c06402de6600a8767da1524f9570b/pyparsing-3.2.5-py3-none-any.whl", hash = "sha256:e38a4f02064cf41fe6593d328d0512495ad1f3d8a91c4f73fc401b3079a59a5e", size = 113890, upload-time = "2025-09-21T04:11:04.117Z" },
+]
+
+[[package]]
+name = "pytest"
+version = "8.4.2"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "colorama", marker = "sys_platform == 'win32'" },
+    { name = "iniconfig" },
+    { name = "packaging" },
+    { name = "pluggy" },
+    { name = "pygments" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/a3/5c/00a0e072241553e1a7496d638deababa67c5058571567b92a7eaa258397c/pytest-8.4.2.tar.gz", hash = "sha256:86c0d0b93306b961d58d62a4db4879f27fe25513d4b969df351abdddb3c30e01", size = 1519618, upload-time = "2025-09-04T14:34:22.711Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/a8/a4/20da314d277121d6534b3a980b29035dcd51e6744bd79075a6ce8fa4eb8d/pytest-8.4.2-py3-none-any.whl", hash = "sha256:872f880de3fc3a5bdc88a11b39c9710c3497a547cfa9320bc3c5e62fbf272e79", size = 365750, upload-time = "2025-09-04T14:34:20.226Z" },
 ]
 
 [[package]]
@@ -596,13 +639,15 @@ version = "1.0.0"
 source = { editable = "." }
 dependencies = [
     { name = "pandas" },
+    { name = "pytest" },
     { name = "vantage6-algorithm-tools" },
 ]
 
 [package.metadata]
 requires-dist = [
     { name = "pandas" },
-    { name = "vantage6-algorithm-tools", specifier = "==5.0.0a36" },
+    { name = "pytest" },
+    { name = "vantage6-algorithm-tools", specifier = "==5.0.0a41" },
 ]
 
 [package.metadata.requires-dev]
@@ -610,7 +655,7 @@ dev = []
 
 [[package]]
 name = "vantage6-algorithm-tools"
-version = "5.0.0a36"
+version = "5.0.0a41"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "openpyxl" },
@@ -623,14 +668,14 @@ dependencies = [
     { name = "sqlalchemy" },
     { name = "vantage6-common" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/60/95/4cecf5c6497747cd7f91fa18a75782400d4051b2187b83797ec9a58ebb79/vantage6_algorithm_tools-5.0.0a36.tar.gz", hash = "sha256:cf6d467889059be54c33ccbda77a64cad51bc799749e83c7acfdf2df005a8887", size = 40234, upload-time = "2025-09-23T11:52:58.025Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/47/59/1a232eca6d9cf21c32a4e5b3c083e8ca56a04dab0c1fc5a181b0866dd4fa/vantage6_algorithm_tools-5.0.0a41.tar.gz", hash = "sha256:46ae718623e4367ce4e9c5d1ce5f8ecc4e56f27063dd9635f814b7e0127ae0d5", size = 51451, upload-time = "2025-10-27T15:21:08.58Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/13/7e/942d9925f80445bf2e30f66a4d20b2708084a4ec0afa49b0c7989e34bdf7/vantage6_algorithm_tools-5.0.0a36-py3-none-any.whl", hash = "sha256:47768497847a12e11abeb367b005b87234b46dd82d54b2cc6bd2444cf3a4d680", size = 44242, upload-time = "2025-09-23T11:52:57.12Z" },
+    { url = "https://files.pythonhosted.org/packages/c1/f8/c165babb0135f1135b2d00adff72e9ae826a5fb9491f7d4cb266f1c43d7d/vantage6_algorithm_tools-5.0.0a41-py3-none-any.whl", hash = "sha256:6c593a5ee1e73df685543c915f1e97cb3f805f5dbd4dbe819f5a47e27feb2999", size = 53471, upload-time = "2025-10-27T15:21:07.603Z" },
 ]
 
 [[package]]
 name = "vantage6-common"
-version = "5.0.0a36"
+version = "5.0.0a41"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "appdirs" },
@@ -645,7 +690,7 @@ dependencies = [
     { name = "rich" },
     { name = "schema" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/f8/4d/ed06b07940116394291c792b28d34bad84809b3bcecde7c3500e1a6f64cb/vantage6_common-5.0.0a36.tar.gz", hash = "sha256:3d5dbe4398c4151fcd8fda3868e33de17e7b883fbb60aaf276092396a4739b68", size = 31339, upload-time = "2025-09-23T11:52:53.514Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/7f/89/c1e0a171355a7f83d562194f0a1a180937b4d61efa7a845aa215df35cb0b/vantage6_common-5.0.0a41.tar.gz", hash = "sha256:af0c853ea589b6a408087d6ab0fe479f4baa5bc653bb82007e542aef8c88f773", size = 37239, upload-time = "2025-10-27T15:21:04.449Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/f1/77/d178a6cdc4c5dd7c3cd2bed11818a59ee3b161d5a92564f56d78c2f737c8/vantage6_common-5.0.0a36-py3-none-any.whl", hash = "sha256:262c38a8e8ee182a61ff4578cf9718f4a663d6323fe679d133ea0561a0cca7fe", size = 37047, upload-time = "2025-09-23T11:52:52.042Z" },
+    { url = "https://files.pythonhosted.org/packages/97/3d/9aa6f9883385d3de982ff81c4068d40ec2ba69efc2ec31153c0edddf0f91/vantage6_common-5.0.0a41-py3-none-any.whl", hash = "sha256:0eb23eb6b84bc46b0c23a68fa6b3333cec0ce5452fa1fc8577118d08b7aac945", size = 44090, upload-time = "2025-10-27T15:21:03.103Z" },
 ]
