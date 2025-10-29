@@ -38,4 +38,3 @@ packages = ["v6-session-basics"]
 
 [tool.uv]
 dev-dependencies = []
-prerelease-mode = "allow"
