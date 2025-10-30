@@ -24,7 +24,12 @@
           "is_frontend_only": false
         }
       ],
-      "databases": []
+      "databases": [
+        {
+          "name": "Dataframe",
+          "description": "Dataframe to use for computing the sum"
+        }
+      ]
     },
     {
       "name": "global_sum_dev_many",
@@ -70,7 +75,16 @@
           "is_frontend_only": false
         }
       ],
-      "databases": []
+      "databases": [
+        {
+          "name": "df1",
+          "description": ""
+        },
+        {
+          "name": "df2",
+          "description": ""
+        }
+      ]
     },
     {
       "name": "pre_process",
