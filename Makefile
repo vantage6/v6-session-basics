@@ -1,6 +1,6 @@
 VANTAGE6_VERSION ?= 5.0.0
 TAG ?= latest
-REGISTRY ?= harbor2.vantage6.ai
+REGISTRY ?= ghcr.io/vantage6
 PLATFORMS ?= linux/amd64
 
 # Use `make PUSH_REG=true` to push images to registry after building
@@ -15,11 +15,11 @@ ifeq ($(PUSH_REG), true)
 endif
 
 image:
-	@echo "Building ${REGISTRY}/algorithms/session-basics:${TAG}-v6-${VANTAGE6_VERSION}"
-	@echo "Building ${REGISTRY}/algorithms/session-basics:latest"
+	@echo "Building ${REGISTRY}/algorithm/session-basics:${TAG}-v6-${VANTAGE6_VERSION}"
+	@echo "Building ${REGISTRY}/algorithm/session-basics:latest"
 	docker buildx build \
-		--tag ${REGISTRY}/algorithms/session-basics:${TAG}-v6-${VANTAGE6_VERSION} \
-		--tag ${REGISTRY}/algorithms/session-basics:latest \
+		--tag ${REGISTRY}/algorithm/session-basics:${TAG}-v6-${VANTAGE6_VERSION} \
+		--tag ${REGISTRY}/algorithm/session-basics:latest \
 		--platform ${PLATFORMS} \
 		-f ./Dockerfile \
 		$(if ${_condition_push},--push .,.)
