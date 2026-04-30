@@ -5,7 +5,7 @@
   "vantage6_version": "5.0.0",
   "partitioning": "horizontal",
   "documentation_url": "",
-  "image": "harbor2.vantage6.ai/algorithms/session-basics",
+  "image": "ghcr.io/vantage6/algorithm/session-basics",
   "functions": [
     {
       "name": "global_sum",
