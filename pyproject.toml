@@ -34,6 +34,8 @@ Issues = "https://github.com/vantage6/v6-session-basics/issues"
 [tool.hatch.build.targets.wheel]
 packages = ["v6-session-basics"]
 
+[dependency-groups]
+dev = []
+
 [tool.uv]
-dev-dependencies = []
-prerelease-mode = "allow"
+prerelease = "allow"
