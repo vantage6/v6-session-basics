@@ -12,7 +12,7 @@ dependencies = [
   "pandas",
   # TODO when this can be fixed to a stable v5 release, remove
   # prerelease=allow in Dockerfile
-  "vantage6-algorithm-tools==5.0.0a40",
+  "vantage6-algorithm-tools==5.0.0rc4",
 ]
 authors = [
   { name = "Bart van Beusekom", email = "b.vanbeusekom@iknl.nl" },
